@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockwise Analysis</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+        scroll-behavior: smooth;
+      }
+      #parameter-plots {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .parameter-section {
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .parameter-text {
+        margin-bottom: 5px;
+        border: 1px solid #0288d1;
+        background-color: #f8f8f8;
+        margin: auto;
+        border-radius: 8px;
+      }
+      h2 {
+        color: #01579b;
+      }
+      p {
+        color: #666;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      iframe {
+        display: block;
+        margin-top: 20px;
+        border: 2px solid #0288d1;
+        border-radius: 8px;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffffc7;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+      .title-wrap {
+        background: #0288d1;
+        color: #fff;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+      .color-text {
+        color: #01579b;
+      }
+      #graph-select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #e1f5fe;
+        transition: background-color 0.3s;
+      }
+      #graph-select:hover {
+        background-color: #b3e5fc;
+      }
+      #graph-container {
+        margin-top: 20px;
+        border: 1px solid #000;
+        padding: 10px;
+        background: #e1f5fe;
+        height: 500px;
+        border-radius: 8px;
+      }
+      #graph-container iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parameter-text">
+      <div class="container">
+        <h2>
+          <span class="title-wrap">
+            Blockwise Mapping of Parameters for
+            <span class="color-text">Mysuru</span> District
+          </span>
+        </h2>
+        <p>
+          This is the blockwise mapping of each parameter for Mysuru district.
+          The analysis covers 16 parameters. Please note that some parameters
+          might not be available due to a lack of samples tested and collected
+          for them.
+        </p>
+        <p>
+          The median has been used as a metric to plot the graphs by integrating
+          multiple samples from multiple sources in a village.
+        </p>
+        <p>
+          The distribution is analysed for Pre-Monsoon (April-June) and
+          Post-Monsoon (October-December) for each block.
+        </p>
+      </div>
+    </div>
+    <select id="graph-select">
+      <option value="HTML/plot_0.html">Free residual Chlorine (mg/l)</option>
+      <option value="HTML/plot_1.html">
+        Total Alkalinity (as Calcium Carbonate) (mg/l)
+      </option>
+      <option value="HTML/plot_2.html">Turbidity (NTU)</option>
+      <option value="HTML/plot_3.html">TDS (mg/l)</option>
+      <option value="HTML/plot_4.html">Fluoride (as F) (mg/l)</option>
+      <option value="HTML/plot_5.html">Colour (Hazen units)</option>
+      <option value="HTML/plot_6.html">Total Hardness (As CaCO3) (mg/l)</option>
+      <option value="HTML/plot_7.html">Sulphate (as SO4) (mg/l)</option>
+      <option value="HTML/plot_8.html">Total coliform (CFU/ 100 ml)</option>
+      <option value="HTML/plot_9.html">Iron (As Fe) (mg/l)</option>
+      <option value="HTML/plot_10.html">E. coli (CFU/100 ml)</option>
+      <option value="HTML/plot_11.html">Odour (NA)</option>
+      <option value="HTML/plot_12.html">Chloride (as Cl) (mg/l)</option>
+      <option value="HTML/plot_13.html">Nitrate (as NO3) (mg/l)</option>
+      <option value="HTML/plot_14.html">pH (NA)</option>
+      <option value="HTML/plot_15.html">Arsenic (mg/l)</option>
+    </select>
+    <div id="graph-container"></div>
+    <script>
+      const select = document.getElementById("graph-select");
+      const container = document.getElementById("graph-container");
+      select.addEventListener("change", function () {
+        const graph = this.value;
+        container.innerHTML = `<iframe src="${graph}" width="100%" height="500"></iframe>`;
+      });
+    </script>
+  </body>
+</html>

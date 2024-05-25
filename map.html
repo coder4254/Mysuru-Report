@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #1a5276;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        
+        .container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .map-info {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .map-info p {
+            margin-bottom: 15px;
+        }
+        .map-info ul {
+            margin-left: 0;
+            padding-left: 20px;
+        }
+        .map-info ul li {
+            list-style: disc;
+            margin-bottom: 8px;
+        }
+        .tip {
+            font-style: italic;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="map-info">
+        <h1>Jal Jeevan Mission</h1>
+        <p>Welcome to the description of our Interactive Map for the Jal Jeevan Mission (JJM)</p>
+        
+        <h2>Introduction</h2>
+        <p>This map aims to provide a visual representation of water-related data under the Jal Jeevan Mission (JJM), a government initiative to provide safe and potable water to all rural households in India. Through this initiative, the government is working towards ensuring access to clean drinking water, which is essential for improving public health and promoting socio-economic development in rural areas.</p>
+        
+        <h2>Map Layers</h2>
+        <p>The map consists of several layers, each serving a specific purpose related to water management and infrastructure development:</p>
+        
+        <h3>JJM Schemes</h3>
+        <p>The Jal Jeevan Mission includes two main schemes:</p>
+        <ul>
+            <li><strong>Single Village Scheme (SVS):</strong> Under SVS, all water-related work is performed within a single village. This includes various stages of infrastructure development to transfer water from its source to tap connections within the village. SVS villages are depicted on the map with a distinctive Pink color.</li>
+            <li><strong>Multiple Village Scheme (MVS):</strong> MVS involves collaboration between multiple villages to provide water to tap connections. This scheme is implemented in areas where it is more feasible or efficient to serve several villages collectively. MVS villages are represented on the map with an Orange color.</li>
+        </ul>
+        
+        <h3>Water Quality Lab</h3>
+        Within each village, there are typically 2-4 labs, including both district-level and sub-district-level labs. These labs conduct regular testing to assess water quality and ensure that it meets the standards set by the Jal Jeevan Mission. The district level lab has generally higher capacity to test different parameters. Each home icon on the map represents a lab location, which can be clicked to view information about the lab.</p>
+        
+        <h3>JJM Status</h3>
+        <p>The status of villages under the Jal Jeevan Mission is categorized into three main stages:</p>
+        <ul>
+            <li><strong>Ongoing:</strong> Villages in this stage have not yet reached a significant level of Functional Household Tap Connection (FHTC) coverage. Various infrastructure projects are still in progress to expand access to clean water.</li>
+            <li><strong>Reported:</strong> Villages that have reported achieving 100% FHTC coverage and meeting all parameters within permissible limits.</li>
+            <li><strong>Certified:</strong> Certified villages have achieved 100% FHTC coverage and have all tested parameters within the permissible limits specified by the Jal Jeevan Mission. These villages are recognized for their efforts in providing safe and sustainable drinking water to all households.</li>
+        </ul>
+        <h4>Certification Criteria:</h4>
+        <ul>
+            <li><strong>Water Quality:</strong> To qualify for certification, villages must provide safe and pure water that meets the permissible limits for physical, chemical, and bacteriological parameters. This includes compliance with the BIS 10500 Standard for water quality.</li>
+            <li><strong>Water Quantity:</strong> Another criterion for certification is the supply of drinking water to households, with a minimum requirement of 55+ litres per capita per day.</li>
+            <li><strong>Coverage:</strong> Certified villages must achieve 100% FHTC coverage, ensuring that every household has access to a functional tap connection for clean drinking water.</li>
+        </ul>
+        
+        <h3>FHTC Coverage</h3>
+        <p>Functional Household Tap Connection (FHTC) coverage refers to the percentage of households in a village that have access to a functional tap connection for clean drinking water. Villages must achieve 100% FHTC coverage to be certified under the Jal Jeevan Mission.</p>
+
+        <h3>LPCD Distribution</h3>
+        <p>Liters Per Capita per Day (LPCD) distribution is a crucial aspect of the Jal Jeevan Mission, as it determines the availability of drinking water to each individual in rural households. The mission aims to ensure that every rural household has access to a minimum of 55 liters per capita per day, meeting the basic water needs of the population.</p>
+        
+        <h3>Certification Observation</h3>
+        <p>The certification observation layer provides insights into the certification status of villages based on specific criteria:</p>
+        <ul>
+            <li><strong>Fail Completely:</strong> When any parameter is non-compliant. </li>
+            <li><strong>Fail Partially:</strong> When more than 8 parameters are not measured, and none are non-complaint. </li>
+            <li><strong>Pass Partially:</strong> When more than 8 parameters are measured and satisfied to be compliant, and none are non-compliant. </li>
+            <li><strong>Pass Completely:</strong> When 12 or more parameters are compliant and none of the parameters are non-compliant. </li>
+        </ul>
+
+        <h3>Watersheds</h3>
+        <p>The watersheds layer represents the geographical areas draining into a particular water body, such as rivers, streams, and lakes.</p>
+        
+        <h3>Waterbodies</h3>
+        <p>The waterbodies layer depicts various water reservoirs, ponds, lakes, dams, and other water sources within the region.</p>
+        
+        <p class="tip">TIPS: Turn on Watersheds and Waterbodies layers both to see all water areas.</p>
+
+        <h2>Conclusion</h2>
+        <p>Thank you for exploring our interactive map for the Jal Jeevan Mission! We hope you found it informative and useful in understanding the progress and impact of water-related initiatives in rural India. By leveraging technology and data visualization, we aim to support the government's efforts in achieving universal access to safe and clean drinking water for all.</p>
+    </div>
+
+    
+</body>
+</html>

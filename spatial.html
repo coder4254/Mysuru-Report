@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #parameter-plots {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .parameter-section {
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .parameter-text {
+            margin-bottom: 5px;
+            border: 1px solid #c9ba14;
+            background-color: #f8f8f8;
+            margin: auto;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;  
+        }
+        iframe {
+            display: block;
+            margin-top: 20px;
+            border: 2px;
+            height: 300px;
+            width: 100%;
+        }
+        
+        .container {
+        max-width: 1100px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-text {
+        color: #e67e22;
+        }
+
+        /* Style Dropdown */
+        #graph-select {
+        padding: 10px; 
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        }
+
+        /* Style Container */
+        #graph-container {
+        margin-top: 20px;
+        border: 1px solid #000;
+        padding: 10px;
+        background: #f5f5f5;
+        height: 1200px;
+        }
+
+        /* Iframe Graph Styles */  
+        #graph-container iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="parameter-text">
+        <div class="container">
+      
+          <h2>
+            <span class="title-wrap">
+              Geospatial analysis of all parameter for each block.
+            </span>
+          </h2>
+       </div>
+        <div id="container">
+            <p>
+                The background shading indicates the concentration of the parameter.
+                Darker shades represent higher concentration, while lighter shades denote lower concentration.
+                The centroids of the villages are used to mark the ticks.
+            </p>                      
+        </div>  
+    </div>
+      
+    <!-- statistical summary -->
+    <select id="graph-select">
+        <!-- all -->
+        <!-- <option value="htmls/statistical_summary.html">All Parameters</option> -->
+
+        <option value="spatials/Free residual Chlorine.png">Free residual Chlorine (mg/l)</option>
+        <option value="spatials/Total Alkalinity.png">Total Alkalinity (as Calcium Carbonate) (mg/l)</option>
+        <option value="spatials/Turbidity.png">Turbidity (NTU)</option>
+        <option value="spatials/TDS.png">TDS (mg/l)</option>
+        <option value="spatials/Magnesium.png">Magnesium (As Mg) (mg/l)</option>
+        <option value="spatials/Fluoride.png">Fluoride (as F) (mg/l)</option>
+        <option value="spatials/Colour.png">Colour (Hazen units)</option>
+        <option value="spatials/Total Hardness.png">Total Hardness (As CaCO3) (mg/l)</option>
+        <option value="spatials/Sulphate.png">Sulphate (as SO4) (mg/l)</option>
+        <option value="spatials/Iron.png">Iron (As Fe) (mg/l)</option>
+        <option value="spatials/Calcium.png">Calcium (as Ca) (mg/l)</option>
+        <option value="spatials/Chloride.png">Chloride (as Cl) (mg/l)</option>
+        <option value="spatials/Nitrate.png">Nitrate (as NO3) (mg/l)</option>
+        <option value="spatials/Conductivity.png">Conductivity (micromhos per centimeter / microsiemens per centimeter)</option>
+        <option value="spatials/pH.png">pH (NA)</option>
+        <option value="spatials/Sodium.png">Sodium (mg/l)</option>
+        <option value="spatials/Taste.png">Taste</option>
+
+    </select>
+      
+    <div id="graph-container">
+      
+      <script>
+      const select = document.getElementById("graph-select");
+      const container = document.getElementById("graph-container");
+      
+      select.addEventListener("change", function() {
+        const graph = this.value;
+        // container.innerHTML = `<iframe src="${graph}" width="100%" height="500"></iframe>`;
+        container.innerHTML = `<img src="${graph}" style="max-width: 100%; max-height: 100%;" />`;
+
+      });
+      </script>
+    
+    </div>
+</body>
+</html>

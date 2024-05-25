@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+    .analysis {
+        font-family: Arial; 
+        padding: 10px;
+        border: 1px solid #ddd;
+        width: 100%;  
+        background-color: rgba(182, 238, 243, 0.804);
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .analysis h2 {
+        text-align: center;
+    }
+    
+    .analysis ul {
+    list-style-position: inside;
+    padding-left: 30px;
+    }
+
+    .point {
+    padding: 10px;
+    margin: 20px 0;
+    border-left: 5px solid #0074d9;  
+    } 
+    .analysis li {
+    position: relative;
+    padding-left: 20px; 
+    margin-bottom: 10px;
+    }
+    
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Water Quality Lab Analysis</h2>
+  
+  <div class="point">
+    <p>According to JJM Guidelines, each lab is required to test at least 3000 samples per financial year</p>  
+    <span></span>
+  </div>
+    <!-- 
+  <div class="point">
+    <p><i>The RDW&SD Water Quality Testing Lab in Chikkaballapur</i> is a district-level laboratory and its more capable in testing various water-quality parameters.</p>
+    <p><i>The RDW&SD Water Quality Testing Labs in Chintamani and Gowribidanur</i> are sub-district level laboratory.</p>
+    <p>While all labs maintain decent performance standards, none have surpassed the landmark of testing over 3000 samples.</p>
+  </div> -->
+
+    <!-- Pie Chart iframe -->
+    <div class="pie">
+      <h2>Different Water Quality Labs and samples tested by them till FY 2024-24</h2>
+      <iframe src="HTML/lab_distribution.html" width="750px" height="600px"></iframe>
+    </div>
+
+    <div class="analysis">
+
+        <div class="point">
+            <h3>Water Testing Analysis:</h3>
+        </div>
+      
+        <ul>
+          <li>
+              A total of <b>9416</b> water samples were tested in Mysuru District.
+          </li>
+          <li>
+              The Mysore lab has a higher capacity for testing water quality parameters as it is a district-level lab. But still its testing is less than Heggadedevana(HD Kote) lab which is a sub-district lab.
+          </li>
+          <li>
+            Heggadedevana Lab has shown better performance.
+          </li>
+          <li>
+            Krishnarajanagar lab has not passed the 3000 testing threshold.
+          </li>
+          <li>
+              Optimizing sample flows to the lowest cost labs could increase savings in the testing budget.
+          </li>
+        </ul>      
+    </div>
+
+    <!-- Map iframe -->
+    <!-- <h2>Observation map for Water Quality Labs</h2>
+    <div class="map">
+        <iframe src="Maps/Index_Chikkaballapur Lab.html" width="100%" height="600px">
+    </div> -->
+
+
+</div>
+
+</body>
+</html>
