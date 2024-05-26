@@ -55,15 +55,16 @@ body {
 }
 
 .catalogue-item {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   margin: 20px;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 150px;
   background: white;
-  border-radius: 75px;
+  border-radius: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: lighter;
@@ -84,10 +85,10 @@ body {
   display: block;
   content: "";
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 150px;
   background: #7ac0fa;
-  border-radius: 75px;
+  border-radius: 10px;
   z-index: -1;
   animation: 1s clockwise infinite;
 }
@@ -195,7 +196,7 @@ body {
   background-color: #99ccff;
   min-width: 250px; /* Ensure dropdown width matches catalogue */
   padding: 20px; /* Add padding for better appearance */
-  border-radius: 20px; /* Match border radius with catalogue */
+  border-radius: 10px; /* Match border radius with catalogue */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
