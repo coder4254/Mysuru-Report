@@ -1,3 +1,1 @@
-Check the project from here:
-  https://tumkur-analysis.netlify.app/
-
+https://jjm-mysuru.netlify.app/
