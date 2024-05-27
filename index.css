@@ -284,6 +284,197 @@ body {
 }
 
 .references ul {
-  list-style: none; /* Remove bullet points */
-  padding-left: 0; /* Remove default padding */
+  list-style-type: decimal; /* Use decimal for numbered list */
+  padding-left: 20px; /* Add padding for proper alignment */
+  margin: 0;
+}
+
+.references li {
+  margin-bottom: 10px; /* Add space between list items */
+  line-height: 1.6;
+}
+/* Add these styles to your existing CSS */
+
+/* Ensure the images don't overflow */
+
+.overview-image {
+  max-width: 50%;
+  height: 83vh;
+  border-radius: 8px;
+}
+
+.goals-image,
+.achievements-image {
+  max-width: 50%;
+  height: 50vh;
+  border-radius: 8px;
+}
+
+/* Flexbox layout for the overview content */
+.overview-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Adjust the flex basis and grow properties */
+.overview-content img {
+  flex: 1 1 40%; /* Image takes up 40% of the container's width */
+}
+
+.overview-content ul {
+  flex: 1 1 60%; /* Text takes up 60% of the container's width */
+}
+
+/* Flexbox layout for the goals content */
+.goals-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.goals-content ul {
+  flex: 1 1 60%; /* Text takes up 60% of the container's width */
+}
+
+.goals-content img {
+  flex: 1 1 40%; /* Image takes up 40% of the container's width */
+}
+
+/* Flexbox layout for the achievements content */
+.achievements-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.achievements-content img {
+  flex: 1 1 40%; /* Image takes up 40% of the container's width */
+}
+
+.achievements-content ul {
+  flex: 1 1 60%; /* Text takes up 60% of the container's width */
+}
+
+/* Ensure the text aligns correctly */
+.overview-content ul,
+.goals-content ul,
+.achievements-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.overview-content li,
+.goals-content li,
+.achievements-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Overview Section Animation */
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.overview-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  overflow: hidden; /* Prevent overflow during animation */
+}
+
+.overview-content img {
+  flex: 1 1 40%; /* Image takes up 40% of the container's width */
+  animation: fadeInImage 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.overview-content ul {
+  flex: 1 1 60%; /* Text takes up 60% of the container's width */
+  animation: fadeInText 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Jal Jeevan Mission Goals Section Animation */
+@keyframes fadeInTextRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInImageLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.goals-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.goals-content ul {
+  flex: 1 1 60%;
+  animation: fadeInTextRight 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.goals-content img {
+  flex: 1 1 40%;
+  animation: fadeInImageLeft 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Key Achievements Section Animation */
+.achievements-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.achievements-content img {
+  flex: 1 1 40%;
+  animation: fadeInImage 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.achievements-content ul {
+  flex: 1 1 60%;
+  animation: fadeInText 1s ease-in-out forwards;
+  opacity: 0;
 }
