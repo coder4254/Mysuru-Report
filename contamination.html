@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contaminated Samples Analysis</title>
+<title>Contaminated Villages Analysis</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -41,15 +41,27 @@ p {
 <body>
 
     <div class="container">
-        <h1>Contaminated Samples Analysis</h1>
-        <p>A parameter is considered contaminated when it exceeds the defined permissible limits.</p>
-        <p>Consumption of water containing contaminated parameters can cause severe health issues.</p>    
+        <h1>Contaminated Villages Analysis</h1>
+        <p>
+            A parameter is considered contaminated when it exceeds the defined permissible limits.</br>
+            Consumption of water containing contaminated parameters can cause severe health issues.
+        </p>    
+        <div>
+            <h2>Contaminated Parameter by Villages</h2>
+            <iframe src="images/wq/contaminated.png" width="100%" height="600px"></iframe>
+        </div>
     </div>
     
     <div class="container">
-        <h2>Top Contaminated Samples Count for Chikkaballapur</h2>
-        <iframe src="HTML/contaminated_parameters.html" width="100%" height="400px"></iframe>
+        <h1>Correlation Matrix of the Water Quality Parameters</h1>
+        <p>
+            This Correlation Matrix can be used to build up a statistical model to find out the value of missing parameters by applying the correlation with other parameters.</br>
+            A Machine Learning model can also be made to do this work
+        </p>
+        <div style="align-items: center;">
+            <h2>Contaminated Parameter by Villages</h2>
+            <iframe src="images/wq/Correlation.png" width="100%" height="900px"></iframe>
+        </div>
     </div>
-
 </body>
 </html>

@@ -97,7 +97,7 @@
   <body>
     <div class="parameter-text">
       <div class="container">
-        <h2>
+        <h2 style="text-align: center;">
           <span class="title-wrap">
             Mapping of Water Quality Parameters
           </span>
@@ -107,37 +107,36 @@
           The analysis covers 16 parameters. Please note that some parameters
           might not be available due to a lack of samples tested and collected
           for them.
-        </p>
-        <p>
+        </br>
           The median has been used as a metric to plot the graphs by integrating
           multiple samples from multiple sources in a village.
-        </p>
-        <p>
+      </br>
           The distribution is analysed for Pre-Monsoon (April-June) and
           Post-Monsoon (October-December) for each block.
         </p>
       </div>
     </div>
-    <select id="graph-select">
-      <option value="HTML/plot_0.html">Free residual Chlorine (mg/l)</option>
-      <option value="HTML/plot_1.html">
-        Total Alkalinity (as Calcium Carbonate) (mg/l)
-      </option>
-      <option value="HTML/plot_2.html">Turbidity (NTU)</option>
-      <option value="HTML/plot_3.html">TDS (mg/l)</option>
-      <option value="HTML/plot_4.html">Fluoride (as F) (mg/l)</option>
-      <option value="HTML/plot_5.html">Colour (Hazen units)</option>
-      <option value="HTML/plot_6.html">Total Hardness (As CaCO3) (mg/l)</option>
-      <option value="HTML/plot_7.html">Sulphate (as SO4) (mg/l)</option>
-      <option value="HTML/plot_8.html">Total coliform (CFU/ 100 ml)</option>
-      <option value="HTML/plot_9.html">Iron (As Fe) (mg/l)</option>
-      <option value="HTML/plot_10.html">E. coli (CFU/100 ml)</option>
-      <option value="HTML/plot_11.html">Odour (NA)</option>
-      <option value="HTML/plot_12.html">Chloride (as Cl) (mg/l)</option>
-      <option value="HTML/plot_13.html">Nitrate (as NO3) (mg/l)</option>
-      <option value="HTML/plot_14.html">pH (NA)</option>
-      <option value="HTML/plot_15.html">Arsenic (mg/l)</option>
-    </select>
+    
+    <div style="text-align: center;">
+      <select id="graph-select" style="text-align: center;">
+        <option value="HTML/plot_0.html">Free residual Chlorine (mg/l)</option>
+        <option value="HTML/plot_1.html">Total Alkalinity (as Calcium Carbonate) (mg/l)</option>
+        <option value="HTML/plot_2.html">Turbidity (NTU)</option>
+        <option value="HTML/plot_3.html">TDS (mg/l)</option>
+        <option value="HTML/plot_4.html">Fluoride (as F) (mg/l)</option>
+        <option value="HTML/plot_5.html">Colour (Hazen units)</option>
+        <option value="HTML/plot_6.html">Total Hardness (As CaCO3) (mg/l)</option>
+        <option value="HTML/plot_7.html">Sulphate (as SO4) (mg/l)</option>
+        <option value="HTML/plot_8.html">Total coliform (CFU/ 100 ml)</option>
+        <option value="HTML/plot_9.html">Iron (As Fe) (mg/l)</option>
+        <option value="HTML/plot_10.html">E. coli (CFU/100 ml)</option>
+        <option value="HTML/plot_11.html">Odour (NA)</option>
+        <option value="HTML/plot_12.html">Chloride (as Cl) (mg/l)</option>
+        <option value="HTML/plot_13.html">Nitrate (as NO3) (mg/l)</option>
+        <option value="HTML/plot_14.html">pH (NA)</option>
+        <option value="HTML/plot_15.html">Arsenic (mg/l)</option>
+      </select>
+    </div>
     <div id="graph-container"></div>
     <script>
       const select = document.getElementById("graph-select");
