@@ -26,7 +26,12 @@ body {
         padding: 20px;
         background-color: #ffffff;
     }
-
+iframe {
+    display: block;
+    margin-top: 20px;
+    border: 2px solid #0288d1;
+    border-radius: 8px;
+    }
 h1,h2,h3 {
     text-align: center;
     color: #333;
@@ -36,6 +41,32 @@ p {
     color: #666;
     line-height: 1.6;
 }
+#graph-select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e1f5fe;
+    transition: background-color 0.3s;
+    }
+#graph-select:hover {
+    background-color: #b3e5fc;
+    }
+#graph-container {
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+    background: #e1f5fe;
+    height: 500px;
+    border-radius: 8px;
+    }
+#graph-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
 </style>
 </head>
 <body>
@@ -46,23 +77,7 @@ p {
     <p>As per data from the Jal Jeevan Mission and other water-related datasets in India, progress towards achieving 100 percent FHTC coverage is a critical indicator of the effectiveness of water supply interventions and the commitment towards ensuring equitable access to safe drinking water as a fundamental human right.</p>
 </div>
 
-<!-- <div class="container">
-    <h2>Households Tap Connections provided:</h2>
-    <iframe src="plots/fhtc p1.html" width="100%" height="400px"></iframe>
-    
-    <p>
-        This shows the distribution of households in FY 2023-24, it includes private connectionsas well.
-    </p>
-</div> -->
-
-
 <div class="container">
-    <h2>FHTC ranges measure for each block</h2>
-    <iframe src="HTML/fhtc r b.html" width="100%" height="400px"></iframe>
-
-    <p>
-        This shows the bar plots at different ranges of FHTC Coverage for each blocks.
-    </p>
     <h3>
         Statistical Summary:
     </h3>
@@ -71,6 +86,41 @@ p {
     </div>
 </div>
 
+<div class="container">
+    <h2>FHTC ranges in percentage</h2>
+    <iframe src="HTML/fhtc r b.html" width="100%" height="400px"></iframe>
+    <p>
+        This shows the bar plots at different ranges of FHTC Coverage for each blocks.
+    </p>
+</div>
+
+<div class="container">
+    <h2>FHTC Ranges for Panchayats</h2>
+    <div style="text-align: center;">
+        <select id="graph-select" style="text-align: center;">
+            <option value="HTML\Panchayat\HEGGADADEVANKOTE_FHTC.html">HEGGADADEVANKOTE</option>
+            <option value="HTML\Panchayat\HUNSUR_FHTC.html">HUNSUR</option>
+            <option value="HTML\Panchayat\KRISHNARAJANAGARA_FHTC.html">KRISHNARAJANAGARA</option>
+            <option value="HTML\Panchayat\MYSORE_FHTC.html">MYSORE</option>
+            <option value="HTML\Panchayat\NANJANGUD_FHTC.html">NANJANGUD</option>
+            <option value="HTML\Panchayat\PIRIYAPATNA_FHTC.html">PIRIYAPATNA</option>
+            <option value="HTML\Panchayat\SALIGRAMA_FHTC.html">SALIGRAMA</option>
+            <option value="HTML\Panchayat\SARAGURU_FHTC.html">SARAGURU</option>
+            <option value="HTML\Panchayat\TIRUMAKUDAL-NARSIPUR_FHTC.html">TIRUMAKUDAL-NARSIPUR</option>
+    </select>
+    </div>
+    <div id="graph-container"></div>
+    <script>
+        const select = document.getElementById("graph-select");
+        const container = document.getElementById("graph-container");
+        
+        select.addEventListener("change", function() {
+            const graph = this.value;
+            container.innerHTML = `<iframe src="${graph}" width="100%" height="500"></iframe>`;
+        });
+        </script>
+    </div>
+</div>
 
 </body>
 </html>

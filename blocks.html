@@ -12,31 +12,14 @@
         background: linear-gradient(to bottom right, #e0f7fa, #80deea);
         scroll-behavior: smooth;
       }
-      #parameter-plots {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      .parameter-section {
-        margin-bottom: 10px;
-        border: 2px solid #ccc;
-        padding: 20px;
-        border-radius: 8px;
-      }
-      .parameter-text {
-        margin-bottom: 5px;
-        border: 1px solid #0288d1;
-        background-color: #f8f8f8;
-        margin: auto;
-        border-radius: 8px;
-      }
+      
       h2 {
         color: #01579b;
       }
       p {
         color: #666;
-        font-size: 18px;
-        line-height: 1.6;
+        font-size: 16px;
+        line-height: 1.1;
       }
       iframe {
         display: block;
@@ -45,16 +28,15 @@
         border-radius: 8px;
       }
       .container {
-        max-width: 1100px;
-        margin: 20px auto;
-        padding: 20px;
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 10px;
         background-color: #ffffffc7;
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s, box-shadow 0.3s;
       }
       .container:hover {
-        transform: translateY(-5px);
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       }
       .title-wrap {
@@ -95,26 +77,19 @@
     </style>
   </head>
   <body>
-    <div class="parameter-text">
-      <div class="container">
-        <h2 style="text-align: center;">
-          <span class="title-wrap">
-            Mapping of Water Quality Parameters
-          </span>
-        </h2>
-        <p>
-          This is the blockwise mapping of each parameter for Mysuru district.
-          The analysis covers 16 parameters. Please note that some parameters
-          might not be available due to a lack of samples tested and collected
-          for them.
-        </br>
-          The median has been used as a metric to plot the graphs by integrating
-          multiple samples from multiple sources in a village.
-      </br>
-          The distribution is analysed for Pre-Monsoon (April-June) and
-          Post-Monsoon (October-December) for each block.
-        </p>
-      </div>
+    <div class="container">
+      <h2 style="text-align: center;">
+        <span class="title-wrap">
+          Mapping of Water Quality Parameters
+        </span>
+      </h2>
+      <p>
+        This analysis provides a blockwise mapping of various parameters, covering 16 different metrics. Please note that some parameters may be unavailable due to insufficient sample collection and testing.
+        <br/>
+        The graphs are plotted using the median value, integrating multiple samples from various sources within each village.
+        <br/>
+        The distribution is analyzed for both Pre-Monsoon (April-June) and Post-Monsoon (October-December) periods for each block.
+      </p>      
     </div>
     
     <div style="text-align: center;">
